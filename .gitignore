@@ -1,0 +1,7 @@
+# Local dev-only preview server, not needed for deployment
+_serve.ps1
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
