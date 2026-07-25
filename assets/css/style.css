@@ -575,6 +575,139 @@ p { margin: 0 0 1em; }
   margin: 0 auto;
 }
 
+.team-card__note {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  max-width: 240px;
+  margin: 10px auto 0;
+}
+
+.team-card__more {
+  display: inline-block;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: var(--color-mauve);
+  font-weight: 600;
+  font-size: 0.88rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 4px 6px;
+}
+
+.team-card__more:hover {
+  color: var(--color-ink);
+}
+
+.team-card__portrait.has-bio {
+  cursor: pointer;
+}
+
+.team-card__portrait.has-bio:hover {
+  box-shadow: 0 0 0 4px var(--color-pink-soft);
+}
+
+/* Hidden by default; JS copies this into the modal when opened. Content
+   still lives in the page source, so it's fully indexable. */
+.team-bio {
+  display: none;
+}
+
+.team-modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(36, 31, 33, 0.6);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.team-modal-backdrop.open {
+  display: flex;
+}
+
+.team-modal {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  max-width: 640px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 40px;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.team-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 8px;
+}
+
+.team-modal__close:hover {
+  color: var(--color-ink);
+}
+
+.team-modal__photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--color-pink-soft);
+  margin: 0 auto 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-modal__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.team-modal__name {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.team-modal__role {
+  text-align: center;
+  color: var(--color-mauve);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.team-modal__body h4 {
+  margin-top: 0;
+}
+
+.team-modal__body p {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 720px) {
+  .team-modal {
+    padding: 28px 22px;
+    max-height: 90vh;
+  }
+
+  .team-modal__photo {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 /* Testimonials */
 .testimonial {
   background: var(--color-white);
