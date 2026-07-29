@@ -393,6 +393,11 @@ p { margin: 0 0 1em; }
   display: none;
 }
 
+.category-block > summary::marker {
+  content: "";
+  display: none;
+}
+
 .category-block__head {
   display: flex;
   align-items: center;
@@ -524,6 +529,11 @@ p { margin: 0 0 1em; }
 }
 
 .sub-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.sub-item > summary::marker {
+  content: "";
   display: none;
 }
 
