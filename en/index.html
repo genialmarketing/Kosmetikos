@@ -25,6 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="preload" as="image" href="../assets/images/leaf-set.png" fetchpriority="high">
 
 <script type="application/ld+json">
 {
@@ -69,6 +70,7 @@
     <nav class="main-nav" aria-label="Main menu">
       <a href="index.html" class="active">Home</a>
       <a href="treatments.html">Treatments</a>
+      <a href="hair.html">Hair</a>
       <a href="booking.html">Book Now</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -87,8 +89,8 @@
 <main id="main">
 
   <section class="hero">
-    <img class="leaf-decor top-right" src="../assets/images/leaf-branch-dark.png" alt="" loading="eager">
-    <img class="leaf-decor bottom-left" src="../assets/images/leaf-branch-muted.png" alt="" loading="eager">
+    <img class="leaf-decor top-right" src="../assets/images/leaf-branch-dark.png" alt="" loading="lazy">
+    <img class="leaf-decor bottom-left" src="../assets/images/leaf-branch-muted.png" alt="" loading="lazy">
     <div class="container">
       <div>
         <div class="rating-badge"><span class="stars">★★★★★</span> 4.8/5 on Google</div>
@@ -101,7 +103,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img class="leaf-set" src="../assets/images/leaf-set.png" alt="Illustration of eucalyptus leaves" width="560" height="336">
+        <img class="leaf-set" src="../assets/images/leaf-set.png" alt="Illustration of eucalyptus leaves" width="560" height="336" fetchpriority="high">
       </div>
     </div>
   </section>
@@ -212,6 +214,7 @@
         <h4>Quick links</h4>
         <ul>
           <li><a href="treatments.html">Treatments</a></li>
+          <li><a href="hair.html">Hair</a></li>
           <li><a href="booking.html">Book Now</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>

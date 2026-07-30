@@ -580,6 +580,79 @@ p { margin: 0 0 1em; }
   margin-bottom: 0;
 }
 
+/* Magazine-style plain entries (no click-to-expand), used on the hair page */
+.sub-item--plain {
+  border-bottom: none;
+  padding: 10px 0;
+}
+
+.sub-item--plain .sub-item__name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 6px;
+}
+
+.sub-item--plain .sub-item__body {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+/* Photos sprinkled between sub-items on the hair page */
+.hair-photo {
+  display: block;
+  max-width: 340px;
+  width: 100%;
+  margin: 28px auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Magazine-style alternating image/text feature rows, one per treatment */
+.hair-feature {
+  display: grid;
+  grid-template-columns: minmax(160px, 240px) 1fr;
+  gap: 28px;
+  align-items: center;
+  margin: 0 0 40px;
+}
+
+.hair-feature__image {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hair-feature__text h3 {
+  margin-bottom: 8px;
+}
+
+.hair-feature__text p {
+  margin-bottom: 0;
+}
+
+.hair-feature--reverse {
+  grid-template-columns: 1fr minmax(160px, 240px);
+}
+
+.hair-feature--reverse .hair-feature__image {
+  order: 2;
+}
+
+@media (max-width: 720px) {
+  .hair-feature,
+  .hair-feature--reverse {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hair-feature--reverse .hair-feature__image {
+    order: 0;
+  }
+}
+
 /* Booking / iframe */
 .booking-frame-wrap {
   background: var(--color-white);
@@ -958,6 +1031,10 @@ p { margin: 0 0 1em; }
 
   .hero-visual {
     order: -1;
+  }
+
+  .leaf-decor {
+    display: none;
   }
 
   .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
